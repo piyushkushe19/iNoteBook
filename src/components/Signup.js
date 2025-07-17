@@ -38,6 +38,8 @@ else{
             }
 
   return (
+    <div>
+        <h2 className='my-3'>Create an account to use iNotebook</h2>
         <form onSubmit={handleSubmit}>
             <div className="mb-3">
                 <label htmlFor="name" className="form-label">Enter your name</label>
@@ -59,6 +61,7 @@ else{
         
             <button type="submit" className="btn btn-primary">Submit</button>
         </form>
+    </div>
 
   )
 }

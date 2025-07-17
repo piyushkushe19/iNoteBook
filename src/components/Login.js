@@ -22,8 +22,8 @@ const json = await response.json();
 console.log(json);
 if(json.success){
     localStorage.setItem('token',json.authtoken);
-    navigate('/');
     props.showAlert("Logged in Successfully","success");
+    navigate('/');
 }
 else{
      props.showAlert("Invalid Details","danger");
@@ -35,6 +35,8 @@ const onChange=(e)=>{
     }
 
   return (
+    <div>
+      <h2 className='my-3'>Login to continue to iNotebook</h2>
         <form onSubmit={handleSubmit}>
         <div className="mb-3">
             <label htmlFor="email" className="form-label">Email address</label>
@@ -47,6 +49,7 @@ const onChange=(e)=>{
         </div>
         <button type="submit" className="btn btn-primary" >Submit</button>
         </form>
+    </div>
   )
 }
 
